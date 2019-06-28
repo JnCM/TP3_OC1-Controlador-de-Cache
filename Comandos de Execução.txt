@@ -1,0 +1,29 @@
+Comandos GCC para geração dos executáveis:
+
+gcc AlgoritmosOrdenacao.h AlgoritmosOrdenacao.c ExecBubbleSort1.c -o bubble1000  #gera o executável para o Bubble Sort de 1000 elementos
+gcc AlgoritmosOrdenacao.h AlgoritmosOrdenacao.c ExecBubbleSort2.c -o bubble10000  #gera o executável para o Bubble Sort de 10000 elementos
+gcc AlgoritmosOrdenacao.h AlgoritmosOrdenacao.c ExecQuickSort1.c -o quick1000  #gera o executável para o Quick Sort de 1000 elementos
+gcc AlgoritmosOrdenacao.h AlgoritmosOrdenacao.c ExecQuickSort2.c -o quick10000  #gera o executável para o Quick Sort de 10000 elementos
+gcc AlgoritmosOrdenacao.h AlgoritmosOrdenacao.c ExecRadixSort1.c -o radix1000  #gera o executável para o Radix Sort de 1000 elementos
+gcc AlgoritmosOrdenacao.h AlgoritmosOrdenacao.c ExecRadixSort2.c -o radix10000  #gera o executável para o Radix Sort de 10000 elementos
+gcc AlgoritmosOrdenacao.h AlgoritmosOrdenacao.c ExecHeapSort1.c -o heap1000  #gera o executável para o Heap Sort de 1000 elementos
+gcc AlgoritmosOrdenacao.h AlgoritmosOrdenacao.c ExecHeapSort2.c -o heap10000  #gera o executável para o Heap Sort de 10000 elementos
+gcc main_matriz_simples.c -o matrizNormal  #gera o executável para a multiplicação de matrizes não otimizada
+gcc main_matriz_otimizacao1.c -o Otimizacao1  #gera o executável para a primeira otimização da multiplicação de matrizes
+gcc main_matriz_otimizacao2.c -o Otimizacao2  #gera o executável para a segunda otimização da multiplicação de matrizes
+gcc main_matriz_otimizacao2.c -o Otimizacao3  #gera o executável para a terceira otimização da multiplicação de matrizes
+
+Comandos do perf para cada algoritmo:
+
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./bubble1000  #Para o Bubble Sort de 1000 elementos
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./bubble10000  #Para o Bubble Sort de 10000 elementos
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./quick1000  #Para o Quick Sort de 1000 elementos
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./quick10000  #Para o Quick Sort de 10000 elementos
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./radix1000  #Para o Radix Sort de 1000 elementos
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./raidx10000  #Para o Radix Sort de 10000 elementos
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./heap1000  #Para o Heap Sort de 1000 elementos
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./heap10000  #Para o Heap Sort de 10000 elementos
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./matrizNormal  #Para a multiplicação de matrizes não otimizada
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./Otimizacao1  #Para a primeira otimização de multiplicação de matrizes
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./Otimizacao2  #Para a segunda otimização de multiplicação de matrizes
+perf stat -e task-clock,cycles,instructions,cache-references,cache-misses -a ./Otimizacao3  #Para a terceira otimização de multiplicação de matrizes
